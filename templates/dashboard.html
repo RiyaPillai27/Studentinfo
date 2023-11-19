@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Message</title>
+</head>
+<body>
+    <h1 align="center">Student Dashboard</h1>
+    <p><a href="/info">Create Student data</a></p>
+    <table border="1" align="center">
+        <tr>
+            <th>Sr No.</th>
+            <th>FirstName</th>
+            <th>MiddleName</th>
+            <th>LastName</th>
+            <th>Fathet'sName</th>
+            <th>Mother'sName</th>
+            <th>DateofBirth</th>
+            <th>Emailid</th>
+            <th>Age</th>
+            <th>Mobile</th>
+            <th>AlternateMobile</th>
+            <th>Address</th>
+            <th>State</th>
+            <th>City</th>
+        </tr>
+        {% for x in data %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{x.firstname}}</td>
+            <td>{{x.middlename}}</td>
+            <td>{{x.lastname}}</td>
+            <td>{{x.father}}</td>
+            <td>{{x.mother}}</td>
+            <td>{{x.d}}</td>
+            <td>{{x.email}}</td>
+            <td>{{x.age}}</td>
+            <td>{{x.mobile}}</td>
+            <td>{{x.amobile}}</td>
+            <td>{{x.add}}</td>
+            <td>{{x.state}}</td>
+            <td>{{x.city}}</td>
+            <td><a href="/edit/{{x.id}}">Edit</a></td>
+            <td><a href="/delete/{{x.id}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    
+</body>
+</html>

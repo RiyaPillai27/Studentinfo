@@ -1,0 +1,79 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student | Information</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+    <form method="POST" action="/info">
+        {% csrf_token %}
+        <table align="center" border="1">
+            <h1 align="center">Student Information Form</h1>    
+            
+            <tr>
+                <td><strong>First Name:</strong></td>
+                <td><input type="text" name="fname" placeholder="first name" /></td>
+            </tr>
+            <tr>
+                <td><strong>Middle Name:</strong></td>
+                <td><input type="text" name="mname" placeholder="middle name" /></td>
+            </tr>
+            <tr>
+                <td><strong>Last Name:</strong></td>
+                <td><input type="text" name="lname" placeholder="last name" /></td>
+            </tr>
+            <tr>
+                <td><strong>Father Name:</strong></td>
+                <td><input type="text" name="fathername" placeholder="father name" /></td>
+            </tr>
+            <tr>
+                <td><strong>Mother Name:</strong></td>
+                <td><input type="text" name="mothername" placeholder="mother name" /></td>
+            </tr>
+            <tr>
+                <td><strong>date of Birth:</strong></td>
+                <td><input type="date" name="dob" placeholder="date of Birth" /></td>
+            </tr>
+            <tr>
+                <td><strong>Email:</strong></td>
+                <td><input type="mail" name="mailid" placeholder="student Mailid" /></td>
+            </tr>
+            <tr>
+
+                <td><strong>Age:</strong></td>
+                <td><input type="text" name="age" placeholder="student age" /></td>
+            </tr>
+            <tr>
+                <td><strong>Mobile No.:</strong></td>
+                <td><input type="number" name="mobile" placeholder="mobile" /></td>
+            </tr>
+            <tr>
+                <td><strong>Alternate Mobile no.:</strong></td>
+                <td><input type="text" name="amobile" placeholder="Alternate mobile" /></td>
+            </tr>
+            <tr>
+                <td><strong>Address:</strong></td>
+                <td><textarea name="address" row="40" cols="40" ></textarea></td>
+            </tr>
+
+            <tr>
+                <td><strong>State:</strong></td>
+                <td><input type="text" name="state" placeholder="State" /></td>
+            </tr>
+            <tr>
+                <td><strong>City:</strong></td>
+                <td><input type="text" name="city" placeholder="City" /></td>
+            </tr>
+            <tr>
+                
+                <td colspan="2" align="center"><button onclick="std()"> Submit</button></td>
+            </tr>
+
+        </table>
+
+    </form>
+   <script src="{% static 'js/main.js' %}"></script> 
+</body>
+</html>

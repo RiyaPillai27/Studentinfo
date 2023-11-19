@@ -1,0 +1,78 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student | Edit</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+<body>
+    <h1>student data</h1>
+    <h1>Student Information Form</h1> 
+    <form method="POST" action="/edit/{{data.id}}">
+        {% csrf_token %}
+        <table>   
+            <tr>
+                <td><strong>First Name:</strong></td>
+                <td><input type="text" name="fname" value="{{data.firstname}}" /></td>
+            </tr>
+            <tr>
+                <td><strong>Middle Name:</strong></td>
+                <td><input type="text" name="mname" value="{{data.middlename}}" /></td>
+            </tr>
+            <tr>
+                <td><strong>Last Name:</strong></td>
+                <td><input type="text" name="lname" value="{{data.lastname}}"/></td>
+            </tr>
+            <tr>
+                <td><strong>Father Name:</strong></td>
+                <td><input type="text" name="fathername" value="{{data.father}}" /></td>
+            </tr>
+            <tr>
+                <td><strong>Mother Name:</strong></td>
+                <td><input type="text" name="mothername" value="{{data.mother}}" /></td>
+            </tr>
+            <tr>
+                <td><strong>date of Birth:</strong></td>
+                <td><input type="date" name="dob" value="{{data.d}}" /></td>
+            </tr>
+            <tr>
+                <td><strong>Email:</strong></td>
+                <td><input type="mail" name="mailid" value="{{data.mail}}" /></td>
+            </tr>
+            <tr>
+                <td><strong>Age:</strong></td>
+                <td><input type="text" name="age" value="{{data.age}}" /></td>
+            </tr>
+            <tr>
+                <td><strong>Mobile No.:</strong></td>
+                <td><input type="number" name="mobile" value="{{data.mobile}}" /></td>
+            </tr>
+            <tr>
+                <td><strong>Alternate Mobile no.:</strong></td>
+                <td><input type="text" name="amobile" value="{{data.amobile}}" /></td>
+            </tr>
+            <tr>
+                <td><strong>Address:</strong></td>
+                <td><textarea name="address" row="40" cols="40" >{{data.add}}</textarea></td>
+            </tr>
+
+            <tr>
+                <td><strong>State:</strong></td>
+                <td><input type="text" name="state" value="{{data.state}}" /></td>
+            </tr>
+            <tr>
+                <td><strong>City:</strong></td>
+                <td><input type="text" name="city" value="{{data.city}}"/></td>
+            </tr>
+            <tr>
+                
+                <td colspan="2" align="center"><button onclick="std()"> Submit</button></td>
+            </tr>
+
+        </table>
+
+    </form>
+   <script src="{% static 'js/main.js' %}"></script> 
+</body>
+</html>
